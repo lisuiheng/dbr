@@ -1,18 +1,18 @@
 # gocraft/dbr (database records)
 
-[![GoDoc](https://godoc.org/github.com/gocraft/dbr?status.png)](https://godoc.org/github.com/gocraft/dbr)
+[![GoDoc](https://godoc.org/github.com/lisuiheng/dbr?status.png)](https://godoc.org/github.com/lisuiheng/dbr)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgocraft%2Fdbr.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgocraft%2Fdbr?ref=badge_shield)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gocraft/dbr)](https://goreportcard.com/report/github.com/gocraft/dbr)
-[![CircleCI](https://circleci.com/gh/gocraft/dbr.svg?style=svg)](https://circleci.com/gh/gocraft/dbr)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lisuiheng/dbr)](https://goreportcard.com/report/github.com/lisuiheng/dbr)
+[![CircleCI](https://circleci.com/gh/lisuiheng/dbr.svg?style=svg)](https://circleci.com/gh/lisuiheng/dbr)
 
 gocraft/dbr provides additions to Go's database/sql for super fast performance and convenience.
 
 ```
-$ go get -u github.com/gocraft/dbr
+$ go get -u github.com/lisuiheng/dbr
 ```
 
 ```go
-import "github.com/gocraft/dbr"
+import "github.com/lisuiheng/dbr"
 ```
 
 ## Driver support
@@ -23,7 +23,7 @@ import "github.com/gocraft/dbr"
 
 ## Examples
 
-See [godoc](https://godoc.org/github.com/gocraft/dbr) for more examples.
+See [godoc](https://godoc.org/github.com/lisuiheng/dbr) for more examples.
 
 ### Open connections
 

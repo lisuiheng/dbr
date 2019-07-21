@@ -1,4 +1,4 @@
-module github.com/gocraft/dbr
+module github.com/lisuiheng/dbr
 
 go 1.13
 

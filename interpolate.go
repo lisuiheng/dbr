@@ -2,6 +2,7 @@ package dbr
 
 import (
 	"database/sql/driver"
+	"github.com/lisuiheng/null"
 	"reflect"
 	"strconv"
 	"strings"
@@ -152,6 +153,26 @@ func (i *interpolator) encodePlaceholder(value interface{}, topLevel bool) error
 	case reflect.Struct:
 		if v.Type() == typeTime {
 			i.WriteString(i.EncodeTime(v.Interface().(time.Time)))
+			return nil
+		}
+		if v.Type() == reflect.TypeOf(null.String{}) {
+			i.WriteString(i.EncodeString(v.Interface().(null.String).String))
+			return nil
+		}
+		if v.Type() == reflect.TypeOf(null.Time{}) {
+			i.WriteString(i.EncodeTime(v.Interface().(null.Time).Time))
+			return nil
+		}
+		if v.Type() == reflect.TypeOf(null.Bool{}) {
+			i.WriteString(i.EncodeBool(v.Interface().(null.Bool).Bool))
+			return nil
+		}
+		if v.Type() == reflect.TypeOf(null.Float{}) {
+			i.WriteString(strconv.FormatFloat(v.Interface().(null.Float).Float64, 'f', -1, 64))
+			return nil
+		}
+		if v.Type() == reflect.TypeOf(null.Int{}) {
+			i.WriteString(strconv.FormatInt(v.Interface().(null.Int).Int64, 10))
 			return nil
 		}
 	case reflect.Slice:
